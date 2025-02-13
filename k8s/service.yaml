@@ -1,13 +1,11 @@
-# service.yaml
 apiVersion: v1
 kind: Service
 metadata:
   name: go-microservice
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: go-microservice
   ports:
   - port: 8080
     targetPort: 8080
-    nodePort: 30080
